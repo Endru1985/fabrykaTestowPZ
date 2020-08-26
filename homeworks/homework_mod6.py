@@ -13,5 +13,5 @@ link.click()
 scroll = driver.find_element_by_xpath('//*[@id="content"]/div/div/div/div/div/div/div/section[8]/div/div/div/div/div/div/div/h2')
 driver.execute_script('arguments[0].scrollIntoView();', scroll)
 
-driver.save_screenshot('H:/programowanie/Kurs_testy_automatyczne/pythonProject/fabrykaTestowPZ//screenshot.png')
+driver.save_screenshot('https://github.com/Endru1985/fabrykaTestowPZ/tree/branch1/homeworks/screenshot.png')
 
