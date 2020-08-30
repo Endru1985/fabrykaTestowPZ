@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome('H:/programowanie/Kurs_testy_automatyczne/pythonProject/fabrykaTestowPZ/chromedriver.exe')
+driver = webdriver.Chrome()
 
 url = 'https://fabrykatestow.pl'
 
@@ -14,8 +14,7 @@ link.click()
 scroll = driver.find_element_by_xpath('//*[@id="content"]/div/div/div/div/div/div/div/section[8]/div/div/div/div/div/div/div/h2')
 driver.execute_script('arguments[0].scrollIntoView();', scroll)
 
-driver.save_screenshot('C:/Users/Andrzej/Pictures/Screenshots/screenshot.png')
+driver.save_screenshot('screenshot.png')
 
-time.sleep(5)
 
 driver.quit()

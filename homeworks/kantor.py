@@ -25,7 +25,7 @@ def kantor(fn):
 
                 print('Kurs Euro:', currency_as_dictionary['rates']['PLN'])
                 print('Data i godzina: ', date_time_now)
-                print(f'Czas wykonania zapytania: {czas_wykonania.microseconds} ms')
+                print(f'Czas wykonania zapytania: {int(czas_wykonania.microseconds / 1000)} ms')
             except requests.Timeout:
                 print('Błąd pozyskania danych')
                 print('Data i godzina: ', date_time_now)
@@ -35,6 +35,7 @@ def kantor(fn):
             time.sleep(15)
 
     return wrapper()
+
 
 @kantor
 def kurs_wymiany():
